@@ -1,0 +1,9 @@
+# Forzar estilo de salto de línea
+* text=auto
+
+# Opcional: desactivar advertencias de CRLF en Windows
+*.js text eol=lf
+*.ts text eol=lf
+*.json text eol=lf
+*.css text eol=lf
+*.html text eol=lf
