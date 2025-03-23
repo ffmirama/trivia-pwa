@@ -1,19 +1,19 @@
-const API_URL = 'http://localhost:3001/api';
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001/api/auth';
 
-export const registerUser = async (username, password) => {
-  const res = await fetch(`${API_URL}/auth/register`, {
+export async function registerUser(username, password) {
+  const res = await fetch(`${API_URL}/register`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ username, password }),
+    body: JSON.stringify({ username, password })
   });
-  return res.json();
-};
+  return await res.json();
+}
 
-export const loginUser = async (username, password) => {
-  const res = await fetch(`${API_URL}/auth/login`, {
+export async function loginUser(username, password) {
+  const res = await fetch(`${API_URL}/login`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ username, password }),
+    body: JSON.stringify({ username, password })
   });
-  return res.json();
-};
+  return await res.json();
+}
