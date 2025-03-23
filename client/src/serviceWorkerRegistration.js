@@ -1,4 +1,4 @@
-// Este archivo registra el service worker para hacer tu app una PWA
+// Este archivo registra el service worker para hacer app una PWA
 
 const isLocalhost = Boolean(
     window.location.hostname === 'localhost' ||
