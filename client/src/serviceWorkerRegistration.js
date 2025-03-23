@@ -12,7 +12,7 @@ const isLocalhost = Boolean(
   
   export function register(config) {
     if ('serviceWorker' in navigator) {
-      const swUrl = `${process.env.PUBLIC_URL}/service-worker.js`;
+      const swUrl = `/service-worker.js`;
   
       if (isLocalhost) {
         // Esto es localhost. Verifica si el SW existe y es válido.
