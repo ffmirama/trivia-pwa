@@ -4,7 +4,11 @@ import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+root.render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  );
 
 // ACTIVA el service worker (esto convierte tu app en una PWA)
 serviceWorkerRegistration.register();
