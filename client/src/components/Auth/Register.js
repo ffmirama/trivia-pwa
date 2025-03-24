@@ -17,25 +17,28 @@ const Register = ({ onAuth }) => {
   };
 
   return (
-    <div>
-      <h2>Registro</h2>
-      <form onSubmit={handleSubmit}>
-        <input
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          placeholder="Usuario"
-        />
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          placeholder="Contraseña"
-        />
-        <button type="submit">Registrarse</button>
-      </form>
-      {msg && <p>{msg}</p>}
+    <div className="container">
+      <div className="card">
+        <h2>Registro</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            placeholder="Usuario"
+          />
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Contraseña"
+          />
+          <button type="submit">Registrarse</button>
+        </form>
+        {msg && <p>{msg}</p>}
+      </div>
     </div>
   );
 };
 
 export default Register;
+

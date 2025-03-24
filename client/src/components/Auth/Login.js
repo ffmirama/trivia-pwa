@@ -1,7 +1,6 @@
-// 📁 client/src/components/Auth/Login.jsx
-
 import React, { useState } from 'react';
 import { loginUser } from '../../services/api';
+import '../../App.css'; // Asegúrate de importar App.css aquí
 
 const Login = ({ onAuth }) => {
   const [username, setUsername] = useState('');
@@ -19,23 +18,25 @@ const Login = ({ onAuth }) => {
   };
 
   return (
-    <div>
-      <h2>Iniciar Sesión</h2>
-      <form onSubmit={handleSubmit}>
-        <input
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          placeholder="Usuario"
-        />
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          placeholder="Contraseña"
-        />
-        <button type="submit">Entrar</button>
-      </form>
-      {msg && <p>{msg}</p>}
+    <div className="container">
+      <div className="card">
+        <h2>Iniciar Sesión</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            placeholder="Usuario"
+          />
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Contraseña"
+          />
+          <button type="submit">Entrar</button>
+        </form>
+        {msg && <p style={{ color: 'red', textAlign: 'center' }}>{msg}</p>}
+      </div>
     </div>
   );
 };

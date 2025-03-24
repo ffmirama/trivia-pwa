@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Login from './components/Auth/Login';
 import Register from './components/Auth/Register';
 import Quiz from './components/Trivia/Quiz';
+import './App.css';
 
 const App = () => {
   const [user, setUser] = useState(null);
