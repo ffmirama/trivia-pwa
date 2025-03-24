@@ -10,7 +10,7 @@ app.use(express.json());
 app.use('/api/auth', authRoutes);
 
 // Puerto
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
   console.log(`Servidor backend corriendo en http://localhost:${PORT}`);
 });
